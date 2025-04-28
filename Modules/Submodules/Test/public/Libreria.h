@@ -2,16 +2,17 @@
 
 #include <string>
 #include <vector>
+#include <memory>
 
 #include "Libro.h"
 
 class Libreria{
     protected:
-        std::vector<Libro*>* Lista;
+        std::vector<std::shared_ptr<Libro>>* Lista;
     public:
         Libreria();
         ~Libreria();
-        void addbook(Libro* libro);
-        std::vector<Libro*>* getlist();
-        Libro* findbook(std::string titolo);
+        void addbook(std::shared_ptr<Libro> libro);
+        std::vector<std::shared_ptr<Libro>>* getlist();
+        std::shared_ptr<Libro> findbook(std::string titolo);
 };

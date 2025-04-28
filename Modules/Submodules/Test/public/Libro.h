@@ -9,7 +9,7 @@ class Libro{
     public:
         Libro(std::string titolo, std::string autore);
         Libro();
-        ~Libro(){}
+        virtual ~Libro(){}
         std::string gettitle();
-        std::string getdetails();
+        virtual std::string getdetails();
 };
