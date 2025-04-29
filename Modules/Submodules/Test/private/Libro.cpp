@@ -3,7 +3,7 @@
 #include "Libro.h"
 
 Libro::Libro(std::string titolo, std::string autore) : Titolo(titolo), Autore(autore){}
-Libro::Libro() : Titolo(""), Autore(""){}
+Libro::Libro() : Titolo(""), Autore(""){} //discorso del file.h
 
 std::string Libro::gettitle(){
     return Titolo;
