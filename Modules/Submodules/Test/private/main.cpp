@@ -17,15 +17,15 @@ int main(){
     mialibreria.addbook(miofumetto);
     mialibreria.addbook(miarivista);
 
-    std::vector<std::shared_ptr<Libro>>* mialista = mialibreria.getlist();
+    std::vector<std::shared_ptr<Libro>> mialista = mialibreria.getlist();
 
-    for(std::shared_ptr<Libro> libro : *mialista){
+    for(std::shared_ptr<Libro> libro : mialista){
         std::cout << libro->getdetails();
     };
     
     std::string titoloX;
     std::getline(std::cin, titoloX);
-    std::shared_ptr<Libro> libroX = mialibreria.findbook(titoloX);
+    std::weak_ptr<Libro> libroX = mialibreria.findbook(titoloX);
 
     std::cout << libroX->getdetails();
     
